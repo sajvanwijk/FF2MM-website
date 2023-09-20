@@ -1,0 +1,12 @@
+.section-separator-section-separator {
+  width: 100%;
+  height: 2px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: var(--dl-color-gray-900);
+  border-style: dashed;
+  border-width: 2px;
+  flex-direction: column;
+}
+

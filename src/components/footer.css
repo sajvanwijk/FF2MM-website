@@ -1,0 +1,101 @@
+.footer-footer-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.footer-footer {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxcontent);
+  align-items: center;
+  padding-top: var(--dl-space-space-tripleunit);
+  padding-left: var(--dl-space-space-tripleunit);
+  padding-right: var(--dl-space-space-tripleunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-tripleunit);
+  justify-content: space-between;
+}
+.footer-social-links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.footer-link {
+  display: contents;
+}
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--dl-space-space-doubleunit);
+  text-decoration: none;
+}
+.footer-link1 {
+  display: contents;
+}
+.footer-icon2 {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--dl-space-space-doubleunit);
+  text-decoration: none;
+}
+.footer-copyright-container-sm {
+  width: 440px;
+  display: none;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.footer-link2 {
+  font-style: italic;
+  font-weight: 300;
+}
+.footer-copyright-container {
+  width: 440px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.footer-link3 {
+  font-style: italic;
+  font-weight: 300;
+}
+
+@media(max-width: 1200px) {
+  .footer-copyright-container-sm {
+    margin-left: var(--dl-space-space-fourunits);
+  }
+  .footer-copyright-container {
+    margin-left: var(--dl-space-space-fourunits);
+  }
+}
+@media(max-width: 991px) {
+  .footer-copyright-container-sm {
+    display: flex;
+    margin-left: var(--dl-space-space-fiveunits);
+  }
+  .footer-copyright-container {
+    display: none;
+    margin-left: var(--dl-space-space-fiveunits);
+  }
+}
+@media(max-width: 767px) {
+  .footer-link2 {
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+@media(max-width: 600px) {
+  .footer-text {
+    font-size: small;
+  }
+  .footer-copyright-container-sm {
+    display: none;
+  }
+}
