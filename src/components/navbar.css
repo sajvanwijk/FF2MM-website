@@ -2,7 +2,7 @@
   width: 100%;
   height: 5rem;
   display: flex;
-  z-index: 99;
+  z-index: 120;
   position: absolute;
   max-width: var(--dl-size-size-maxcontent);
   align-items: flex-start;
@@ -351,6 +351,9 @@
     left: 0px;
     position: absolute;
   }
+  .navbar-root-class-name {
+    position: static;
+  }
 }
 @media(max-width: 600px) {
   .navbar-container {
@@ -361,8 +364,5 @@
   }
   .navbar-text07 {
     display: none;
-  }
-  .navbar-root-class-name {
-    position: static;
   }
 }

@@ -498,16 +498,16 @@
     align-items: center;
     flex-direction: column;
   }
-}
-@media(max-width: 600px) {
-  .home-hero {
-    height: fit-content;
-  }
   .home-content-container {
     width: 90%;
     padding-top: var(--dl-space-space-fiveunits);
     padding-bottom: var(--dl-space-space-fiveunits);
   }
+  .home-hero {
+    height: fit-content;
+  }
+}
+@media(max-width: 600px) {
   .home-hero-text {
     width: 100%;
     font-size: 18px;
