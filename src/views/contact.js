@@ -13,12 +13,12 @@ const Contact = (props) => {
         <title>Contact - Feel Free 2 Make Music!</title>
         <meta
           name="description"
-          content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
+          content="Onze contactgegevens"
         />
         <meta property="og:title" content="Contact - Feel Free 2 Make Music!" />
         <meta
           property="og:description"
-          content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
+          content="Onze contactgegevens"
         />
       </Helmet>
       <PageSkeletonWNavbarFooter rootClassName="page-skeleton-wnavbar-footer-root-class-name">

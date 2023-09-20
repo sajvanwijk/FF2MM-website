@@ -11,7 +11,7 @@ const AankomendeOptredens = (props) => {
   return (
     <div className="aankomende-optredens-container">
       <Helmet>
-        <title>Aankomende-optredens - Feel Free 2 Make Music!</title>
+        <title>Aankomende optredens - Feel Free 2 Make Music!</title>
         <meta
           name="description"
           content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
@@ -28,7 +28,7 @@ const AankomendeOptredens = (props) => {
       <PageSkeletonWNavbarFooter rootClassName="page-skeleton-wnavbar-footer-root-class-name2">
         <div className="aankomende-optredens-container01">
           <TitleBlock
-            text="Hier treden wij de komende tijd op. Komm vooral een kijkje nemen!"
+            text="Hier treden wij de komende tijd op. Kom vooral een kijkje nemen!"
             heading="Aankomende optredens"
             rootClassName="title-block-root-class-name"
           ></TitleBlock>
@@ -123,8 +123,6 @@ const AankomendeOptredens = (props) => {
               />
             </div>
           </div>
-          <div className="aankomende-optredens-container14"></div>
-          <div className="aankomende-optredens-container15"></div>
         </div>
       </PageSkeletonWNavbarFooter>
     </div>

@@ -11,18 +11,18 @@ const LidWorden = (props) => {
   return (
     <div className="lid-worden-container">
       <Helmet>
-        <title>Lid-worden - Feel Free 2 Make Music!</title>
+        <title>Lid worden - Feel Free 2 Make Music!</title>
         <meta
           name="description"
-          content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
+          content="Lees hier hoe je lid kunt worden van Feel Free 2 Make Music!"
         />
         <meta
           property="og:title"
-          content="Lid-worden - Feel Free 2 Make Music!"
+          content="Lid worden - Feel Free 2 Make Music!"
         />
         <meta
           property="og:description"
-          content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
+          content="Lees hier hoe je lid kunt worden van Feel Free 2 Make Music!"
         />
       </Helmet>
       <PageSkeletonWNavbarFooter rootClassName="page-skeleton-wnavbar-footer-root-class-name4">

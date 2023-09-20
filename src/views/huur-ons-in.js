@@ -11,14 +11,14 @@ const HuurOnsIn = (props) => {
   return (
     <div className="huur-ons-in-container">
       <Helmet>
-        <title>Huur-ons-in - Feel Free 2 Make Music!</title>
+        <title>Huur ons in - Feel Free 2 Make Music!</title>
         <meta
           name="description"
           content="Welkom bij orkest Feel Free 2 Make Music! Vrijheid in het maken van muziek!"
         />
         <meta
           property="og:title"
-          content="Huur-ons-in - Feel Free 2 Make Music!"
+          content="Huur ons in - Feel Free 2 Make Music!"
         />
         <meta
           property="og:description"
