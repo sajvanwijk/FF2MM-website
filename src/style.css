@@ -1,3 +1,4 @@
+/* ### Root variables ### */
 :root {
   --dl-color-gray-500: #595959;
   --dl-color-gray-700: #999999;
@@ -35,6 +36,39 @@
   --dl-color-secondary-darker-ochre: #614f11ff;
   --dl-color-secondary-darker-ochre-brightened: #735c15ff;
 }
+
+/* Font imports */
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('ProximaSoft-Regular.woff2') format('woff2'),
+      url('ProximaSoft-Regular.woff') format('woff'),
+      url('ProximaSoft-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('ProximaSoft-Medium.woff2') format('woff2'),
+      url('ProximaSoft-Medium.woff') format('woff'),
+      url('ProximaSoft-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('ProximaSoft-SemiBold.woff2') format('woff2'),
+      url('ProximaSoft-SemiBold.woff') format('woff'),
+      url('ProximaSoft-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .teleport-show {
   display: flex !important;
   transform: none !important;
@@ -107,11 +141,13 @@
   height: fit-content;
   align-self: center;
   margin-top: auto;
-  font-family: 'DM Serif Display';
+  font-family: 'Proxima Soft';
   margin-left: var(--dl-space-space-tripleunit);
   white-space: nowrap;
   margin-right: var(--dl-space-space-tripleunit);
   margin-bottom: auto;
+  font-style: normal;
+  font-weight: 600;
 }
 .Section-Text {
   font-size: 18px;
