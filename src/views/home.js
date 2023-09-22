@@ -35,7 +35,7 @@ const Home = (props) => {
             <Player
               src="https://lottie.host/f5bd291e-6286-4ef1-ae16-d4e68690bed3/zMKWGKiBZm.json"
               loop
-              speed="1"
+              speed="0.7"
               autoplay
               background="transparent"
               className="home-lottie-node"
@@ -43,7 +43,7 @@ const Home = (props) => {
             <Player
               src="https://lottie.host/f5bd291e-6286-4ef1-ae16-d4e68690bed3/zMKWGKiBZm.json"
               loop
-              speed="0.9"
+              speed="0.6"
               autoplay
               background="transparent"
               className="home-lottie-node1"
