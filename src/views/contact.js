@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import PageSkeletonWNavbarFooter from '../components/page-skeleton-w-navbar-footer'
 import SectionHeader from '../components/section-header'
+import ContactForm from '../components/contact-form'
 import './contact.css'
 
 const Contact = (props) => {
@@ -29,28 +30,7 @@ const Contact = (props) => {
               rootClassName="section-header-root-class-name2"
             ></SectionHeader>
             <div className="contact-content-container">
-              <div className="contact-form-container">
-                <span className="contact-heading BigCard-Heading">
-                  Schrijf hier je bericht
-                </span>
-                <input
-                  type="text"
-                  required="true"
-                  placeholder="Naam"
-                  className="contact-name input"
-                />
-                <input
-                  type="text"
-                  required="true"
-                  placeholder="E-mail adres"
-                  className="contact-email input"
-                />
-                <textarea
-                  placeholder="Uw bericht"
-                  className="contact-message textarea"
-                ></textarea>
-                <button className="contact-cta-btn Anchor button">SEND</button>
-              </div>
+              <ContactForm></ContactForm>
               <div className="contact-locations-container">
                 <div className="contact-location-1">
                   <span className="contact-heading1">Onze contactgegevens</span>

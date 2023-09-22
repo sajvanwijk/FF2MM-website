@@ -7,13 +7,13 @@
   flex-direction: row;
 }
 .imgtext-block-image {
-  width: 220px;
+  width: 300px;
   height: auto;
   align-self: center;
   object-fit: cover;
   margin-left: var(--dl-space-space-tripleunit);
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: var(--dl-radius-radius-mediumradius);
 }
 .imgtext-block-container1 {
   width: 100%;

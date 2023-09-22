@@ -32,7 +32,8 @@
   --dl-color-dimcolors-dimgreen: #408878ff;
   --dl-color-primary-redprimary: #cd4e47ff;
   --dl-radius-radius-largeradius: 40px;
-  --dl-color-secondary-dark-ochre: #7c6416ff;
+  --dl-radius-radius-mediumradius: 20px;
+  --dl-color-secondary-dark-ochre: rgb(117, 97, 32);
   --dl-color-secondary-darker-ochre: #614f11ff;
   --dl-color-secondary-darker-ochre-brightened: #735c15ff;
 }

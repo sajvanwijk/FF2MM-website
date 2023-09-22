@@ -6,6 +6,7 @@ import PageSkeletonWNavbarFooter from '../components/page-skeleton-w-navbar-foot
 import TextBlock from '../components/text-block'
 import SectionHeader from '../components/section-header'
 import './lid-worden.css'
+import ContactForm from '../components/contact-form'
 
 const LidWorden = (props) => {
   return (
@@ -32,38 +33,11 @@ const LidWorden = (props) => {
             heading="Lid worden"
             rootClassName="text-block-root-class-name2"
           ></TextBlock>
-          <SectionHeader
-            heading="Hieronder iets voor de quotes"
-            rootClassName="section-header-root-class-name"
-          ></SectionHeader>
           <div className="lid-worden-contactformulier">
             <div className="lid-worden-get-in-touch">
               <SectionHeader></SectionHeader>
               <div className="lid-worden-content-container">
-                <div className="lid-worden-form-container">
-                  <span className="lid-worden-heading BigCard-Heading">
-                    Schrijf hier je bericht
-                  </span>
-                  <input
-                    type="text"
-                    required="true"
-                    placeholder="Naam"
-                    className="lid-worden-name input"
-                  />
-                  <input
-                    type="text"
-                    required="true"
-                    placeholder="E-mail adres"
-                    className="lid-worden-email input"
-                  />
-                  <textarea
-                    placeholder="Uw bericht"
-                    className="lid-worden-message textarea"
-                  ></textarea>
-                  <button className="lid-worden-cta-btn Anchor button">
-                    SEND
-                  </button>
-                </div>
+                <ContactForm/>
               </div>
             </div>
           </div>

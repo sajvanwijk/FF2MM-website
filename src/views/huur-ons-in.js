@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import PageSkeletonWNavbarFooter from '../components/page-skeleton-w-navbar-footer'
-import TextBlock from '../components/text-block'
-import SectionHeader from '../components/section-header'
-import './huur-ons-in.css'
+import PageSkeletonWNavbarFooter from "../components/page-skeleton-w-navbar-footer";
+import TextBlock from "../components/text-block";
+import SectionHeader from "../components/section-header";
+import ContactForm from "../components/contact-form";
+import "./huur-ons-in.css";
 
 const HuurOnsIn = (props) => {
   return (
@@ -35,36 +36,13 @@ const HuurOnsIn = (props) => {
           <div className="huur-ons-in-get-in-touch">
             <SectionHeader rootClassName="section-header-root-class-name1"></SectionHeader>
             <div className="huur-ons-in-content-container">
-              <div className="huur-ons-in-form-container">
-                <span className="huur-ons-in-heading BigCard-Heading">
-                  Schrijf hier je bericht
-                </span>
-                <input
-                  type="text"
-                  required="true"
-                  placeholder="Naam"
-                  className="huur-ons-in-name input"
-                />
-                <input
-                  type="text"
-                  required="true"
-                  placeholder="E-mail adres"
-                  className="huur-ons-in-email input"
-                />
-                <textarea
-                  placeholder="Uw bericht"
-                  className="huur-ons-in-message textarea"
-                ></textarea>
-                <button className="huur-ons-in-cta-btn button Anchor">
-                  SEND
-                </button>
-              </div>
+              <ContactForm/>
             </div>
           </div>
         </div>
       </PageSkeletonWNavbarFooter>
     </div>
-  )
-}
+  );
+};
 
-export default HuurOnsIn
+export default HuurOnsIn;

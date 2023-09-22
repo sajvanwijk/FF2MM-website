@@ -25,7 +25,7 @@ const App = () => {
         <Route component={LidWorden} exact path="/lid-worden" />
         <Route component={Contact} exact path="/contact" />
         <Route component={HuurOnsIn} exact path="/huur-ons-in" />
-        <Route component={NotFound} path="**" />
+        <Route component={NotFound} path="/page-not-found" />
       </div>
     </Router>
   )

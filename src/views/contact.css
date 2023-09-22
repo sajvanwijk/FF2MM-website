@@ -152,6 +152,12 @@
     margin-bottom: var(--dl-space-space-tripleunit);
   }
 }
+@media screen and (max-width: 1200px) {
+  .contact-form-container {
+    width: 100%;
+  }
+}
+  
 @media(max-width: 767px) {
   .contact-content-container {
     width: 100%;

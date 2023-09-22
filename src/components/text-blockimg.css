@@ -47,13 +47,13 @@
   margin-bottom: var(--dl-space-space-doubleunit);
 }
 .text-blockimg-image {
-  width: 220px;
+  width: 300px;
   height: auto;
   align-self: center;
   object-fit: cover;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
   margin-right: var(--dl-space-space-tripleunit);
-  border-radius: 50%;
+  border-radius: var(--dl-radius-radius-mediumradius);
 }
 @media(max-width: 991px) {
   .text-blockimg-container1 {

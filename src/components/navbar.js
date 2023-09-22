@@ -28,19 +28,19 @@ const Navbar = (props) => {
           </h1>
         </Link>
         <div className="navbar-container2">
-          <Link
+          {/* <Link
             to="/meer-over-ons"
             className="navbar-navlink02 Button-Text navbar-button button"
           >
             {props.button}
-          </Link>
+          </Link> */}
           <Link
             to="/aankomende-optredens"
             className="navbar-navlink03 Button-Text navbar-button button"
           >
             {props.button1}
           </Link>
-          <Link
+          {/* <Link
             to="/huur-ons-in"
             className="navbar-navlink04 Button-Text navbar-button button"
           >
@@ -51,7 +51,7 @@ const Navbar = (props) => {
             className="navbar-navlink05 Button-Text navbar-button button"
           >
             {props.button3}
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
             className="navbar-navlink06 Button-Text navbar-button button"
@@ -84,7 +84,7 @@ const Navbar = (props) => {
             ></div>
           </div>
           <ul data-thq="thq-dropdown-list" className="navbar-dropdown-list">
-            <li data-thq="thq-dropdown" className="navbar-dropdown list-item">
+            {/* <li data-thq="thq-dropdown" className="navbar-dropdown list-item">
               <div
                 data-thq="thq-dropdown-toggle"
                 className="navbar-dropdown-toggle1"
@@ -93,7 +93,7 @@ const Navbar = (props) => {
                   Meer over ons
                 </Link>
               </div>
-            </li>
+            </li> */}
             <li data-thq="thq-dropdown" className="navbar-dropdown1 list-item">
               <div
                 data-thq="thq-dropdown-toggle"
@@ -108,7 +108,7 @@ const Navbar = (props) => {
                 </Link>
               </div>
             </li>
-            <li data-thq="thq-dropdown" className="navbar-dropdown2 list-item">
+            {/* <li data-thq="thq-dropdown" className="navbar-dropdown2 list-item">
               <div
                 data-thq="thq-dropdown-toggle"
                 className="navbar-dropdown-toggle3"
@@ -127,7 +127,7 @@ const Navbar = (props) => {
                   Lid worden
                 </Link>
               </div>
-            </li>
+            </li> */}
             <li data-thq="thq-dropdown" className="navbar-dropdown4 list-item">
               <div
                 data-thq="thq-dropdown-toggle"

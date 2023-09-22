@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 
 import Navbar from '../components/navbar'
 import ImgtextBlock from '../components/imgtext-block'
+import TextBlockimg from '../components/text-blockimg'
 import TitleBlock from '../components/title-block'
 import Footer from '../components/footer'
 import './home.css'
@@ -52,7 +53,7 @@ const Home = (props) => {
             <div className="home-hero-text">
               <h1 className="home-heading">
                 <span className="home-text">
-                  Hallootjes, en welkom bij orkest
+                  Hallo, en welkom bij orkest
                 </span>
                 <br className="Section-Heading"></br>
                 <span className="home-text02 Section-Heading">
@@ -84,81 +85,58 @@ const Home = (props) => {
         <ImgtextBlock
           text="Wij zijn een groep enthousiaste muziekkanten die het leuk vinden om muziek te maken. Het wisselende repertoire, de samenhorigheid en het plezier wat we eraan beleven staat hoog in het vaandel. Alle muziekstukken worden speciaal voor ons gearrangeerd.  We spelen licht Klassiek tot Nederpop, maar ook kerst medleys. Zo hebben we ons laten horen op braderieën, evenementdagen. We brengen ook serenades op uitnodiging. En we doen regelmatig kleine projecten waar iedereen aan kan meedoen."
           heading="Wie zijn wij?"
-          image_src="https://images.unsplash.com/photo-1608650774892-e353df4c154f?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQyfHxtdXNpY2lhbnxlbnwwfHx8fDE2OTUwNjg4MDl8MA&amp;ixlib=rb-4.0.3&amp;w=300"
+          image_src="trompet.jpg"
           rootClassName="imgtext-block-root-class-name"
         ></ImgtextBlock>
-        <div className="home-container2">
-          <div className="home-container3">
-            <div className="home-block">
-              <div className="home-content-container1">
-                <h1 className="home-text07 BigCard-Heading">
-                  We zoeken ook muzikanten!
-                </h1>
-                <span className="home-text08">
-                  <span className="Card-Text">
-                    We zijn op zoek naar vrolijke muzikanten die ons orkest
-                    willen komen versterken. We zijn op het moment onder andere
-                    op zoek naar: een bassist, een slagwerker en een
-                    trombonespeler. Maar elk ander instrument is ook van harte
-                    welkom! Benieuwd?
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                  <Link to="/lid-worden">Word lid!</Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <img
-            alt="image"
-            src="https://images.unsplash.com/photo-1619961602105-16fa2a5465c2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDd8fG11c2ljaWFufGVufDB8fHx8MTY5NTA2ODc5NXww&amp;ixlib=rb-4.0.3&amp;w=300"
-            className="home-image"
-          />
-        </div>
+        <TextBlockimg
+        text="We zijn op zoek naar vrolijke muzikanten die ons orkest willen komen versterken. We zijn op het moment onder andere op zoek naar: een bassist, een slagwerker en een trombonespeler. Maar elk ander instrument is ook van harte welkom! Benieuwd? Word lid!"
+        heading="We zoeken ook Muzikanten!"
+        image_src="op_zoek_naar_muzikanten.jpg"
+        rootClassName="text-block-img-root-class-name">
+        </TextBlockimg>
         <div id="ourstory" className="home-our-story">
           <TitleBlock></TitleBlock>
           <div className="home-cards-container">
             <div className="home-left-section">
               <div className="home-video-container">
-                <video
-                  poster="https://play.teleporthq.io/static/svg/videoposter.svg"
-                  preload="auto"
-                  playsInline
+                <img
+                  src="optreden_winkelcentrum_hoofddorp.jpg"
                   className="home-video"
-                ></video>
-                <div className="home-play-container">
+                ></img>
+                {/* <div className="home-play-container">
                   <svg viewBox="0 0 1024 1024" className="home-icon2">
                     <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM426 704v-384l256 192z"></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
               <div className="home-content-container2">
                 <span className="home-heading1 Card-Heading">
-                  This text is the name of the article. Lorem ipsum dolor sit
-                  metsed do eiusm od tempor.
+                  Flashmob winkelcentrum Hoofddorp
                 </span>
                 <span className="home-text10 Card-Text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer nec odio. Praesent libero. Sed cursus ante dapibus
-                  diam.c Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
-                  augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
-                  nulla. Class aptent taciti sociosqu ad litora torquent per
-                  conubia nostra, per inceptos himenaeos.
-                </span>
-                <span className="home-text11 Card-Text">
-                  {' '}
-                  Fusce nec tellus sed augue semper porta. Mauris massa.
-                  Vestibulum lacinia arcu eget nulla. Class aptent taciti
-                  sociosqu ad litora torquent per conubia nostra, per inceptos
-                  himenaeos.
                 </span>
               </div>
             </div>
-            <div className="home-right-section">
+            <div className="home-left-section">
+              <div className="home-video-container">
+                <img src="optreden2.jpg"
+                  className="home-video"
+                ></img>
+                {/* <div className="home-play-container">
+                  <svg viewBox="0 0 1024 1024" className="home-icon2">
+                    <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM426 704v-384l256 192z"></path>
+                  </svg>
+                </div> */}
+              </div>
+              <div className="home-content-container2">
+                <span className="home-heading1 Card-Heading">
+                  Optreden Roelofarendsveen
+                </span>
+                <span className="home-text10 Card-Text">
+                </span>
+              </div>
+            </div>
+            {/* <div className="home-right-section">
               <div className="home-card">
                 <img
                   alt="image"
@@ -212,7 +190,7 @@ const Home = (props) => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
