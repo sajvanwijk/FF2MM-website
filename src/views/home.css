@@ -247,16 +247,18 @@
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 .home-left-section {
-  width: 50%;
+  width: 47%;
   display: flex;
   align-items: center;
   border-color: var(--dl-color-gray-900);
   border-width: 1px;
-  margin-right: var(--dl-space-space-fourunits);
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
+  margin-bottom: var(--dl-space-space-fourunits);
 }
 .home-video-container {
   width: 100%;

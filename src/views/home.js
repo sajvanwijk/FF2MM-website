@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Player } from '@lottiefiles/react-lottie-player'
-import { Helmet } from 'react-helmet'
+import { Player } from "@lottiefiles/react-lottie-player";
+import { Helmet } from "react-helmet";
 
-import Navbar from '../components/navbar'
-import ImgtextBlock from '../components/imgtext-block'
-import TextBlockimg from '../components/text-blockimg'
-import TitleBlock from '../components/title-block'
-import Footer from '../components/footer'
-import './home.css'
+import Navbar from "../components/navbar";
+import ImgtextBlock from "../components/imgtext-block";
+import TextBlockimg from "../components/text-blockimg";
+import TitleBlock from "../components/title-block";
+import Footer from "../components/footer";
+import "./home.css";
 
 const Home = (props) => {
   return (
@@ -52,21 +52,19 @@ const Home = (props) => {
           <div className="home-content-container">
             <div className="home-hero-text">
               <h1 className="home-heading">
-                <span className="home-text">
-                  Hallo, en welkom bij orkest
-                </span>
+                <span className="home-text">Hallo, en welkom bij orkest</span>
                 <br className="Section-Heading"></br>
                 <span className="home-text02 Section-Heading">
                   Feel Free
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: ' ',
+                      __html: " ",
                     }}
                   />
                 </span>
                 <span className="home-text03 Section-Heading">2</span>
                 <span className="home-text04 Section-Heading">
-                  {' '}
+                  {" "}
                   Make Music!
                 </span>
               </h1>
@@ -89,14 +87,46 @@ const Home = (props) => {
           rootClassName="imgtext-block-root-class-name"
         ></ImgtextBlock>
         <TextBlockimg
-        text="We zijn op zoek naar vrolijke muzikanten die ons orkest willen komen versterken. We zijn op het moment onder andere op zoek naar: een bassist, een slagwerker en een trombonespeler. Maar elk ander instrument is ook van harte welkom! Benieuwd? Word lid!"
-        heading="We zoeken ook Muzikanten!"
-        image_src="op_zoek_naar_muzikanten.jpg"
-        rootClassName="text-block-img-root-class-name">
-        </TextBlockimg>
+          text="We zijn op zoek naar vrolijke muzikanten die ons orkest willen komen versterken. We zijn op het moment onder andere op zoek naar: een bassist, een slagwerker en een trombonespeler. Maar elk ander instrument is ook van harte welkom! Benieuwd? Word lid!"
+          heading="We zoeken ook Muzikanten!"
+          image_src="op_zoek_naar_muzikanten.jpg"
+          rootClassName="text-block-img-root-class-name"
+        ></TextBlockimg>
         <div id="ourstory" className="home-our-story">
           <TitleBlock></TitleBlock>
           <div className="home-cards-container">
+            <div className="home-left-section">
+              <div className="home-video-container">
+                <img
+                  src="bloemencorso2.jpg"
+                  className="home-video"
+                ></img>
+                {/* <div className="home-play-container">
+                  <svg viewBox="0 0 1024 1024" className="home-icon2">
+                    <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM426 704v-384l256 192z"></path>
+                  </svg>
+                </div> */}
+              </div>
+              <div className="home-content-container2">
+                <span className="home-heading1 Card-Heading">
+                  Corso Roelofarendsveen
+                </span>
+                <span className="home-text10 Card-Text">
+                  Het jaarlijkse corso in Roelofarendsveen was voor ons het
+                  moment om te laten zien wie we zijn. Hoe pakken we dit aan?!
+                  Dan komen de ideeën los. Uiteindelijk gekozen voor de bakfiets
+                  van ons jongste lid Carice. Bloemen gehaald kippengaas
+                  gescoord en het belangrijkst instrumenten uit de kast van
+                  Wilma en André gehaald. Het opsteken kon beginnen. Het ging
+                  als een trein. Na een paar uur zaten we aan het bier met
+                  pizza. Op naar de westmeerlaan. Tot onze verbazing wonnen we
+                  de eerste prijs in de categorie Bijzonder. En dat zijn we ook.
+                  Na een start met regen was het een mooie optocht. We hebben
+                  ons op een mooie manier laten zien wie we zijn. En misschien
+                  volgend jaar weer……..
+                </span>
+              </div>
+            </div>
             <div className="home-left-section">
               <div className="home-video-container">
                 <img
@@ -113,15 +143,12 @@ const Home = (props) => {
                 <span className="home-heading1 Card-Heading">
                   Flashmob winkelcentrum Hoofddorp
                 </span>
-                <span className="home-text10 Card-Text">
-                </span>
+                <span className="home-text10 Card-Text"></span>
               </div>
             </div>
             <div className="home-left-section">
               <div className="home-video-container">
-                <img src="optreden2.jpg"
-                  className="home-video"
-                ></img>
+                <img src="optreden2.jpg" className="home-video"></img>
                 {/* <div className="home-play-container">
                   <svg viewBox="0 0 1024 1024" className="home-icon2">
                     <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM426 704v-384l256 192z"></path>
@@ -132,71 +159,15 @@ const Home = (props) => {
                 <span className="home-heading1 Card-Heading">
                   Optreden Roelofarendsveen
                 </span>
-                <span className="home-text10 Card-Text">
-                </span>
+                <span className="home-text10 Card-Text"></span>
               </div>
             </div>
-            {/* <div className="home-right-section">
-              <div className="home-card">
-                <img
-                  alt="image"
-                  src="/whatsapp%20image%202023-09-06%20at%2013.25.50-1500w.jpg"
-                  loading="lazy"
-                  className="home-image1"
-                />
-                <div className="home-content-container3">
-                  <span className="home-text12 SmallCard-Heading">
-                    This text is the name of the article. Lorem ipsum dolor sit
-                    metsed ...
-                  </span>
-                </div>
-              </div>
-              <div className="home-card1">
-                <img
-                  alt="image"
-                  src="https://play.teleporthq.io/static/svg/default-img.svg"
-                  className="home-image2"
-                />
-                <div className="home-content-container4">
-                  <span className="home-text13 SmallCard-Heading">
-                    This text is the name of the article. Lorem ipsum dolor sit
-                    metsed ...
-                  </span>
-                </div>
-              </div>
-              <div className="home-card2">
-                <img
-                  alt="image"
-                  src="https://play.teleporthq.io/static/svg/default-img.svg"
-                  className="home-image3"
-                />
-                <div className="home-content-container5">
-                  <span className="home-text14 SmallCard-Heading">
-                    This text is the name of the article. Lorem ipsum dolor sit
-                    metsed ...
-                  </span>
-                </div>
-              </div>
-              <div className="home-card3">
-                <img
-                  alt="image"
-                  src="https://play.teleporthq.io/static/svg/default-img.svg"
-                  className="home-image4"
-                />
-                <div className="home-content-container6">
-                  <span className="home-text15 SmallCard-Heading">
-                    This text is the name of the article. Lorem ipsum dolor sit
-                    metsed ...
-                  </span>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
       <Footer></Footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

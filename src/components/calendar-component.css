@@ -112,6 +112,7 @@
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
+  white-space: pre-wrap;
 }
 .calendar-component-image1 {
   width: 200px;
