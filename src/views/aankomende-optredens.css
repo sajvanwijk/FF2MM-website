@@ -280,6 +280,16 @@
   align-items: flex-start;
   flex-direction: row;
 }
+.slanted-text {
+  height: 400px;
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  color: lightgray;
+  transform: rotate(20deg);
+  display: grid;
+  place-content: center;
+}
 @media(max-width: 1400px) {
   .aankomende-optredens-text {
     color: var(--dl-color-gray-white);
@@ -310,6 +320,11 @@
   .aankomende-optredens-icon2 {
     width: 226px;
     height: 213px;
+  }
+}
+@media(max-width: 991px) {
+  .slanted-text {
+    font-size: 32px;
   }
 }
 @media(max-width: 767px) {
@@ -516,5 +531,8 @@
   }
   .aankomende-optredens-container15 {
     justify-content: center;
+  }
+  .slanted-text {
+    font-size: 24px;
   }
 }

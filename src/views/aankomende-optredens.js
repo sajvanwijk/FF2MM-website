@@ -32,7 +32,7 @@ const AankomendeOptredens = (props) => {
             heading="Aankomende optredens"
             rootClassName="title-block-root-class-name"
           ></TitleBlock>
-          <div style={{height:"400px", width:"100%", fontSize:"50px", fontWeight:'bold', color:'lightgray', transform:"rotate(20deg)", display:"grid", placeContent:"center"}}>Binnenkort meer informatie</div>
+          <div className="slanted-text">Binnenkort meer informatie</div>
           {/* <CalendarComponent
             image_src="https://images.unsplash.com/photo-1472653431158-6364773b2a56?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxldmVudHxlbnwwfHx8fDE2OTUwNjYzMzZ8MA&amp;ixlib=rb-4.0.3&amp;h=300"
             image_src1="https://images.unsplash.com/photo-1472653431158-6364773b2a56?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxldmVudHxlbnwwfHx8fDE2OTUyMDg1NjZ8MA&amp;ixlib=rb-4.0.3&amp;h=300"
