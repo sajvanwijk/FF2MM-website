@@ -2,6 +2,7 @@
   "name": "ff2mm-website",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://feelfree2makemusic.nl",
   "dependencies": {
     "@craco/craco": "^7.0.0-alpha.0",
     "@lottiefiles/react-lottie-player": "3.4.7",
