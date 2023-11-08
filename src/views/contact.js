@@ -7,6 +7,11 @@ import SectionHeader from '../components/section-header'
 import ContactForm from '../components/contact-form'
 import './contact.css'
 
+import {getContactPage} from '../sanity'
+
+const pagecontent = await getContactPage();
+
+
 const Contact = (props) => {
   return (
     <div className="contact-container">
@@ -35,7 +40,7 @@ const Contact = (props) => {
                 <div className="contact-location-1">
                   <span className="contact-heading1">Onze contactgegevens</span>
                   <a
-                    href="mailto:feelfree2makemusic@gmail.com?subject="
+                    href={`mailto:${pagecontent.email_address}?subject=`}
                     className="contact-link"
                   >
                     <div className="contact-email1">
@@ -53,14 +58,14 @@ const Contact = (props) => {
                         </span>
                         <br className="Section-Text"></br>
                         <span className="Section-Text">
-                          feelfree2makemusic@gmail.com
+                          {pagecontent.email_address}
                         </span>
                         <br></br>
                       </span>
                     </div>
                   </a>
                   <a
-                    href="https://www.facebook.com/profile.php?id=61550917932627"
+                    href={`${pagecontent.facebook_link}`}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="contact-link1"

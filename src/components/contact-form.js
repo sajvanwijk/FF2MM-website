@@ -2,6 +2,10 @@ import React from "react";
 import { useState } from "react";
 import sanitizeHtml from "sanitize-html";
 
+import { getContactPage } from "../sanity";
+
+const pagecontent = await getContactPage();
+
 
 const ContactForm = (props) => {
     const [onderwerp, setOnderwerp] = useState("");
@@ -11,12 +15,12 @@ const ContactForm = (props) => {
         setOnderwerp(encodeURI(sanitizeHtml(onderwerp)));
         setBericht(encodeURI(sanitizeHtml(bericht)));
         window.location.href =
-        `mailto:feelfree2makemusic@gmail.com?subject=${onderwerp}&body=${bericht}%0D%0D`;
+        `mailto:${pagecontent.email_address}?subject=${onderwerp}&body=${bericht}%0D%0D`;
     };
   return (
     <div className="contact-form-container">
       <span className="contact-heading BigCard-Heading">
-        Schrijf hier je bericht
+        {pagecontent.msgbox_header}
       </span>
         <input
           value={onderwerp}
@@ -37,7 +41,7 @@ const ContactForm = (props) => {
         formAction=""
         className="contact-cta-btn Anchor button"
       >
-        Verstuur via email
+        {pagecontent.msgbox_btn}
       </button>
     </div>
   );

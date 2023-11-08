@@ -7,6 +7,11 @@ import TitleBlock from "../components/title-block";
 import CalendarComponent from "../components/calendar-component";
 import "./aankomende-optredens.css";
 
+ import { getUpcomingPerformancesHeader, getUpcomingPerformances } from "../sanity";
+
+ const pageheader = await getUpcomingPerformancesHeader();
+ const pagecontent = await getUpcomingPerformances();
+
 const AankomendeOptredens = (props) => {
   return (
     <div className="aankomende-optredens-container">
@@ -28,7 +33,7 @@ const AankomendeOptredens = (props) => {
       <PageSkeletonWNavbarFooter rootClassName="page-skeleton-wnavbar-footer-root-class-name2">
         <div className="aankomende-optredens-container01">
           <TitleBlock
-            text="Hier treden wij de komende tijd op. Kom vooral een kijkje nemen!"
+            text={`${pageheader.text}`}
             heading="Aankomende optredens"
             rootClassName="title-block-root-class-name"
           ></TitleBlock>

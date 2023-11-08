@@ -11,6 +11,11 @@ import TitleBlock from "../components/title-block";
 import Footer from "../components/footer";
 import "./home.css";
 
+import { getHomepageBanner } from "../sanity";
+import { urlFor } from "../sanity";
+
+const banner = await getHomepageBanner();
+
 const Home = (props) => {
   return (
     <div className="home-container">
@@ -30,7 +35,7 @@ const Home = (props) => {
         <div id="resources" className="home-hero">
           <Navbar rootClassName="navbar-root-class-name"></Navbar>
           <div className="home-color-filter"></div>
-          <div className="home-hero-image"></div>
+          <div className="home-hero-image" style={{backgroundImage: `url(${urlFor(banner.hero_image)})`}}></div>
           <div id="banner-extension" className="home-banner-extension">
             <Player
               src="https://lottie.host/f5bd291e-6286-4ef1-ae16-d4e68690bed3/zMKWGKiBZm.json"
@@ -52,7 +57,7 @@ const Home = (props) => {
           <div className="home-content-container">
             <div className="home-hero-text">
               <h1 className="home-heading">
-                <span className="home-text">Hallo, en welkom bij orkest</span>
+                <span className="home-text">{banner.title}</span>
                 <br className="Section-Heading"></br>
                 <span className="home-text02 Section-Heading">
                   Feel Free
@@ -69,10 +74,12 @@ const Home = (props) => {
                 </span>
               </h1>
               <span className="home-text05 Section-Text-Lg">
-                Wij brengen vrijheid in het maken van muziek!
+                {banner.subtitle}
               </span>
               <Link to="/aankomende-optredens" className="home-cta-btn Anchor">
-                <span>Bekijk onze aankomende optredens!</span>
+                <span>
+                  {banner.button}
+                </span>
                 <svg viewBox="0 0 1024 1024" className="home-icon">
                   <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
                 </svg>
