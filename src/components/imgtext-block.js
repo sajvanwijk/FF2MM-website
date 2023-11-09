@@ -2,6 +2,8 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+import parse from 'html-react-parser'
+
 import './imgtext-block.css'
 
 const ImgtextBlock = (props) => {
@@ -18,7 +20,7 @@ const ImgtextBlock = (props) => {
             <h1 className="imgtext-block-text BigCard-Heading">
               {props.heading}
             </h1>
-            <span className="imgtext-block-text1 Card-Text">{props.text}</span>
+            <span className="imgtext-block-text1 Card-Text">{parse(props.text)}</span>
           </div>
         </div>
       </div>

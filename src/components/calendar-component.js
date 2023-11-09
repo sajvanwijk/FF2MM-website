@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import './calendar-component.css'
 
+import parse from "html-react-parser";
+
 const CalendarComponent = (props) => {
   return (
     <div className={`calendar-component-container`}>
@@ -17,10 +19,16 @@ const CalendarComponent = (props) => {
               ></path>
             </svg>
             <div className="calendar-component-container3">
-              <span className="calendar-component-text">{props.datum_dag}</span>
-              <span className="calendar-component-text1 BigCard-Heading">
-                {props.datum_maand}
-              </span>
+              {props.datum_dag && props.datum_maand ? (
+                <>
+                <span className="calendar-component-text">{props.datum_dag}</span>
+                <span className="calendar-component-text1 BigCard-Heading">
+                  {props.datum_maand.slice(0,3)}
+                </span>
+                </>
+              ) : (
+                <span className="calendar-component-text">?</span>
+              )}
             </div>
           </div>
           <img
@@ -34,7 +42,7 @@ const CalendarComponent = (props) => {
           <h1 className="calendar-component-text2 BigCard-Heading">
             {props.heading}
           </h1>
-          <span className="calendar-component-text3">{props.text}</span>
+          <span className="calendar-component-text3">{parse(props.text)}</span>
         </div>
         <img
           alt={props.image_alt}

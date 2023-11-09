@@ -7,10 +7,17 @@ import TitleBlock from "../components/title-block";
 import CalendarComponent from "../components/calendar-component";
 import "./aankomende-optredens.css";
 
- import { getUpcomingPerformancesHeader, getUpcomingPerformances } from "../sanity";
+import { getUpcomingPerformancesHeader, getUpcomingPerformances } from "../sanity";
 
- const pageheader = await getUpcomingPerformancesHeader();
- const pagecontent = await getUpcomingPerformances();
+import { urlFor } from "../sanity";
+import { toHTML } from "@portabletext/to-html";
+
+const pageheader = await getUpcomingPerformancesHeader();
+const pagecontent = await getUpcomingPerformances();
+var root_styles = getComputedStyle(document.querySelector(':root'));
+
+const calendar_component_bgcolors = [root_styles.getPropertyValue('--dl-color-dimcolors-dimblue'), root_styles.getPropertyValue('--dl-color-dimcolors-dimgreen')];
+const maanden = ['Jan', 'Feb', 'Mrt', 'Apr', 'Mei', 'Jun', 'Jul','Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
 
 const AankomendeOptredens = (props) => {
   return (
@@ -37,29 +44,17 @@ const AankomendeOptredens = (props) => {
             heading="Aankomende optredens"
             rootClassName="title-block-root-class-name"
           ></TitleBlock>
-          {/* <div className="slanted-text">Binnenkort meer informatie</div> */}
-          <CalendarComponent
-            rootClassName="calendar-component-root-class-name"
-            heading={"MusicalClip Dieren"}
-            datum_dag={"7"}
-            datum_maand={"Okt"}
-            text={`Een fabel over een wolf met schapen en een Wouw. Een project met muziek dan en zang. Nieuwsgierig geworden?? Kom kijken naar een van de volgende uitvoeringen op 7 oktober:
-            - Noordplein in Roleofarendsveen
-            - Symphonie in Nieuw Vennep
-            - Burgemeester v. Stamplein in Hoofddorp
-            `}
-            image_src={"/schaap.jpg"}
-          ></CalendarComponent>
-          <CalendarComponent
-            image_src={"/kerst.jpeg"}
-            rootClassName="calendar-component-root-class-name"
-            bgcolor="var(--dl-color-dimcolors-dimgreen)"
-            heading={"Kerstproject"}
-            datum_dag={"?"}
-            datum_maand={"Dec"}
-            text={`We ook met andere projecten bezig om op te zetten. Zoals een Kerstproject. Meer informatie volgt. Heb je interesse om mee te doen met een project mail ons dan naar feelfree2makemusic@gmail.com
-            `}
-          ></CalendarComponent>
+          {pagecontent.map((item, index) => (
+            <CalendarComponent
+              rootClassName="calendar-component-root-class-name"
+              heading={item.title}
+              datum_dag={new Date(item.date).getDay()}
+              datum_maand={maanden[new Date(item.date).getMonth()]}
+              text={toHTML(item.text)}
+              image_src={urlFor(item.picture)}
+              bgcolor={calendar_component_bgcolors[index]}
+              ></CalendarComponent>
+            ))};
         </div>
       </PageSkeletonWNavbarFooter>
     </div>
