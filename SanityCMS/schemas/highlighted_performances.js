@@ -10,6 +10,7 @@ export default {
                 hotspot: true
             },
             title: 'Afbeelding',
+            validation: Rule => Rule.required()
         },
         {
             name: 'title',
