@@ -41,9 +41,9 @@
 /* Font imports */
 @font-face {
   font-family: 'Proxima Soft';
-  src: url('ProximaSoft-Regular.woff2') format('woff2'),
-      url('ProximaSoft-Regular.woff') format('woff'),
-      url('ProximaSoft-Regular.ttf') format('truetype');
+  src: url('/ProximaSoft-Regular.woff2') format('woff2'),
+      url('/ProximaSoft-Regular.woff') format('woff'),
+      url('/ProximaSoft-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -51,9 +51,9 @@
 
 @font-face {
   font-family: 'Proxima Soft';
-  src: url('ProximaSoft-Medium.woff2') format('woff2'),
-      url('ProximaSoft-Medium.woff') format('woff'),
-      url('ProximaSoft-Medium.ttf') format('truetype');
+  src: url('/ProximaSoft-Medium.woff2') format('woff2'),
+      url('/ProximaSoft-Medium.woff') format('woff'),
+      url('/ProximaSoft-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -61,9 +61,9 @@
 
 @font-face {
   font-family: 'Proxima Soft';
-  src: url('ProximaSoft-SemiBold.woff2') format('woff2'),
-      url('ProximaSoft-SemiBold.woff') format('woff'),
-      url('ProximaSoft-SemiBold.ttf') format('truetype');
+  src: url('/ProximaSoft-SemiBold.woff2') format('woff2'),
+      url('/ProximaSoft-SemiBold.woff') format('woff'),
+      url('/ProximaSoft-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
