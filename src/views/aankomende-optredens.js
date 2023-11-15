@@ -46,12 +46,13 @@ const AankomendeOptredens = (props) => {
           ></TitleBlock>
           {pagecontent.map((item, index) => (
             <CalendarComponent
+              key={index}
               rootClassName="calendar-component-root-class-name"
               heading={item.title}
               datum_dag={new Date(item.date).getDay()}
               datum_maand={maanden[new Date(item.date).getMonth()]}
               text={toHTML(item.text)}
-              image_src={urlFor(item.picture)}
+              image_src={item.picture ? urlFor(item.picture).url() : null}
               bgcolor={calendar_component_bgcolors[index]}
               ></CalendarComponent>
             ))};

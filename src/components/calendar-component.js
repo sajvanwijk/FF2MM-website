@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './calendar-component.css'
+import "./calendar-component.css";
 
 import parse from "html-react-parser";
 
 const CalendarComponent = (props) => {
   return (
     <div className={`calendar-component-container`}>
-      <div className="calendar-component-calendar-item"  style={{backgroundColor: props.bgcolor}}>
+      <div
+        className="calendar-component-calendar-item"
+        style={{ backgroundColor: props.bgcolor }}
+      >
         <div className="calendar-component-container1">
           <div className="calendar-component-container2">
             <svg viewBox="0 0 1024 1024" className="calendar-component-icon">
@@ -21,21 +24,26 @@ const CalendarComponent = (props) => {
             <div className="calendar-component-container3">
               {props.datum_dag && props.datum_maand ? (
                 <>
-                <span className="calendar-component-text">{props.datum_dag}</span>
-                <span className="calendar-component-text1 BigCard-Heading">
-                  {props.datum_maand.slice(0,3)}
-                </span>
+                  <span className="calendar-component-text">
+                    {props.datum_dag.toString()}
+                  </span>
+                  <span className="calendar-component-text1 BigCard-Heading">
+                    {props.datum_maand.slice(0, 3)}
+                  </span>
                 </>
               ) : (
                 <span className="calendar-component-text">?</span>
               )}
             </div>
           </div>
-          <img
-            alt={props.image_alt}
-            src={props.image_src}
-            className="calendar-component-image"
-          />
+          {props.image_src ? (
+            <img
+              alt={props.image_alt}
+              src={props.image_src}
+              className="calendar-component-image"
+            />
+          ) : null}
+          ;
         </div>
         <div className="calendar-component-container4"></div>
         <div className="calendar-component-container5">
@@ -44,35 +52,37 @@ const CalendarComponent = (props) => {
           </h1>
           <span className="calendar-component-text3">{parse(props.text)}</span>
         </div>
-        <img
-          alt={props.image_alt}
-          src={props.image_src}
-          className="calendar-component-image1"
-        />
+        {props.image_src ? (
+          <img
+            alt={props.image_alt}
+            src={props.image_src}
+            className="calendar-component-image1"
+          />
+        ) : null}
       </div>
     </div>
-  )
-}
+  );
+};
 
 CalendarComponent.defaultProps = {
-  image_alt: 'image',
-  rootClassName: '',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.',
-  datum_maand: 'Okt',
-  datum_dag: '5',
-  heading: 'Evenementnaam',
-  image_src: '/whatsapp%20image%202023-09-06%20at%2013.25.50-1200w.jpg',
-  bgcolor: 'var(--dl-color-dimcolors-dimblue)'
-}
+  image_alt: "",
+  rootClassName: "",
+  text: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+  datum_maand: "Okt",
+  datum_dag: "5",
+  heading: "Evenementnaam",
+  image_src: "/whatsapp%20image%202023-09-06%20at%2013.25.50-1200w.jpg",
+  bgcolor: "var(--dl-color-dimcolors-dimblue)",
+};
 
 CalendarComponent.propTypes = {
   image_alt: PropTypes.string,
   rootClassName: PropTypes.string,
   text: PropTypes.string,
   datum_maand: PropTypes.string,
-  datum_dag: PropTypes.string,
+  datum_dag: PropTypes.number,
   heading: PropTypes.string,
   image_src: PropTypes.string,
-}
+};
 
-export default CalendarComponent
+export default CalendarComponent;

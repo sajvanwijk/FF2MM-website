@@ -5,6 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Helmet } from "react-helmet";
 
 import Navbar from "../components/navbar";
+import TextBlock from "../components/text-block";
 import ImgtextBlock from "../components/imgtext-block";
 import TextBlockimg from "../components/text-blockimg";
 import TitleBlock from "../components/title-block";
@@ -97,6 +98,16 @@ const Home = (props) => {
         <div>
           {textblocks.map((textblock, index) => {
             return (() => {
+              if (!textblock.picture) {
+                return (
+                  <TextBlock
+                    key={index}
+                    text={toHTML(textblock.text)}
+                    heading={textblock.title}
+                    rootClassName="text-blockimg-root-class-name"
+                  />
+                );
+              }
               switch (index % 2) {
                 case 0:
                   return (
@@ -104,7 +115,7 @@ const Home = (props) => {
                       key={index}
                       text={toHTML(textblock.text)}
                       heading={textblock.title}
-                      image_src={urlFor(textblock.picture)}
+                      image_src={urlFor(textblock.picture).url()}
                       rootClassName="imgtext-block-root-class-name"
                     />
                   );
@@ -114,7 +125,7 @@ const Home = (props) => {
                       key={index}
                       text={toHTML(textblock.text)}
                       heading={textblock.title}
-                      image_src={urlFor(textblock.picture)}
+                      image_src={urlFor(textblock.picture).url()}
                       rootClassName="imgtext-block-root-class-name"
                     />
                   );
@@ -128,24 +139,26 @@ const Home = (props) => {
           <TitleBlock></TitleBlock>
           <div className="home-cards-container">
             <>
-            {imagehighlights.map((imagehighlight, index) => (
-              <div key={index} className="home-left-section">
-                <div className="home-video-container">
-                  <img
-                    src={urlFor(imagehighlight.picture)}
-                    className="home-video"
-                  ></img>
+              {imagehighlights.map((imagehighlight, index) => (
+                <div key={index} className="home-left-section">
+                  <div className="home-video-container">
+                    {imagehighlight.picture ? (
+                      <img
+                        src={urlFor(imagehighlight.picture).url()}
+                        className="home-video"
+                      ></img>
+                    ) : null}
+                  </div>
+                  <div className="home-content-container2">
+                    <span className="home-heading1 Card-Heading">
+                      {imagehighlight.title}
+                    </span>
+                    <span className="home-text10 Card-Text">
+                      {parse(toHTML(imagehighlight.text))}
+                    </span>
+                  </div>
                 </div>
-                <div className="home-content-container2">
-                  <span className="home-heading1 Card-Heading">
-                    {imagehighlight.title}
-                  </span>
-                  <span className="home-text10 Card-Text">
-                    {parse(toHTML(imagehighlight.text))}
-                  </span>
-                </div>
-              </div>
-            ))}
+              ))}
             </>
           </div>
         </div>
