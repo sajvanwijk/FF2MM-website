@@ -1,3 +1,5 @@
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
+
 export const structure = (S, context) =>
   S.list()
     .title('Content')
@@ -12,22 +14,19 @@ export const structure = (S, context) =>
             .documentId('homepage_banner')
             .title('Homepagina banner')
         ),
-      S.documentTypeListItem('homepage_text_block')
-        .title('Homepagina tekstblokken'),
-      S.documentTypeListItem('highlighted_performances')
-        .title('Onze optredens/eerdere optredens'),
-        S.divider(),
-        S.listItem()
-          .title('Aankomende optredens introductietekst')
-          .child(
-            S.editor()
-              .id('upcoming_performances_header')
-              .schemaType('upcoming_performances_header')
-              .documentId('upcoming_performances_header')
-              .title('Aankomende optredens pagina')
-          ),
-        S.documentTypeListItem('upcoming_performances')
-          .title('Aankomende optredens'),
+      orderableDocumentListDeskItem({type: 'homepage_text_block', title: 'Homepagina tekstblokken', S, context}),
+      orderableDocumentListDeskItem({type: 'highlighted_performances', title: 'Onze optredens/eerdere optredens', S, context}),
+      S.divider(),
+      S.listItem()
+        .title('Aankomende optredens introductietekst')
+        .child(
+          S.editor()
+            .id('upcoming_performances_header')
+            .schemaType('upcoming_performances_header')
+            .documentId('upcoming_performances_header')
+            .title('Aankomende optredens pagina')
+        ),
+        orderableDocumentListDeskItem({type: 'upcoming_performances', title: 'Aankomende optredens', S, context}),
         S.divider(),
         S.listItem()
         .title('Contactpagina')

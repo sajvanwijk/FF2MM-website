@@ -18,7 +18,7 @@ export function urlFor(source) {
 
 // --- GROQ query fetcher functions ---
 export async function getHomepageTextBlocks() {
-    const query = `*[_type == "homepage_text_block"]`
+    const query = `*[_type == "homepage_text_block"]|order(orderRank)`
     const result = await client.fetch(query)
     return result
 }
@@ -30,7 +30,7 @@ export async function getHomepageBanner() {
 }
 
 export async function getHighlightedPerformances() {
-    const query = `*[_type == "highlighted_performances"]`
+    const query = `*[_type == "highlighted_performances"]|order(orderRank)`
     const result = await client.fetch(query)
     return result
 }
@@ -42,7 +42,7 @@ export async function getUpcomingPerformancesHeader() {
 }
 
 export async function getUpcomingPerformances() {
-    const query = `*[_type == "upcoming_performances"]`
+    const query = `*[_type == "upcoming_performances"]|order(orderRank)`
     const result = await client.fetch(query)
     return result
 }

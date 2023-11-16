@@ -1,8 +1,12 @@
+import { orderRankField, orderRankOrdering } from "@sanity/orderable-document-list"
+
 export default {
     name: 'upcoming_performances',
     type: 'document',
     title: 'Aankomende optredens',
+    ordering: [orderRankOrdering],
     fields: [
+        orderRankField({ type: 'upcoming_performances' }),
         {
             name: 'date',
             type: 'date',

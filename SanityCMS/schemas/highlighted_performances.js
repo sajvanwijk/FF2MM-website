@@ -1,8 +1,12 @@
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+
 export default {
     name: 'highlighted_performances',
     type: 'document',
     title: 'Uitgelichte optredens',
+    ordering: [orderRankOrdering],
     fields: [
+        orderRankField({ type: 'highlighted_performances' }),
         {
             name: 'picture',
             type: 'image',
