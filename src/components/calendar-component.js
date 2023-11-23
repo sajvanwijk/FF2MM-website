@@ -43,7 +43,6 @@ const CalendarComponent = (props) => {
               className="calendar-component-image"
             />
           ) : null}
-          ;
         </div>
         <div className="calendar-component-container4"></div>
         <div className="calendar-component-container5">
